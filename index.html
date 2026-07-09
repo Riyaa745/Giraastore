@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Giraastore — cute stationery, gifts and lifestyle essentials.">
+  <title>Giraastore | Made with a little love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="icon-truck" viewBox="0 0 24 24"><path d="M3 6h11v11H3zM14 10h4l3 3v4h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></symbol>
+    <symbol id="icon-cash" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 9h.01M17 15h.01"/><circle cx="12" cy="12" r="2.5"/></symbol>
+    <symbol id="icon-return" viewBox="0 0 24 24"><path d="M4 10h11a5 5 0 0 1 5 5v2M8 6l-4 4 4 4"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+    <symbol id="icon-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="icon-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 13H6L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 5 3 8.5 7 10 4-1.5 7-5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="icon-support" viewBox="0 0 24 24"><path d="M4 14v-3a8 8 0 0 1 16 0v3"/><path d="M4 14h3v5H5a2 2 0 0 1-2-2v-1a2 2 0 0 1 1-2ZM20 14h-3v5h2a2 2 0 0 0 2-2v-1a2 2 0 0 0-1-2ZM17 19c-1 2-3 2-5 2"/></symbol>
+    <symbol id="icon-gift" viewBox="0 0 24 24"><path d="M3 10h18v11H3zM12 10v11M2 6h20v4H2z"/><path d="M12 6H8.5A2.5 2.5 0 1 1 11 3.5L12 6Zm0 0h3.5A2.5 2.5 0 1 0 13 3.5L12 6Z"/></symbol>
+  </svg>
+
+  <!-- ==================== TOP BAR MARQUEE ==================== -->
+  <div class="topbar" aria-label="Store benefits">
+    <div class="marquee">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span><svg><use href="#icon-truck"/></svg>Free shipping above &#8377;499</span>
+          <i>|</i>
+          <span><svg><use href="#icon-cash"/></svg>COD available</span>
+          <i>|</i>
+          <span><svg><use href="#icon-return"/></svg>Easy 7-day exchange or return</span>
+          <i>|</i>
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <span><svg><use href="#icon-truck"/></svg>Free shipping above &#8377;499</span>
+          <i>|</i>
+          <span><svg><use href="#icon-cash"/></svg>COD available</span>
+          <i>|</i>
+          <span><svg><use href="#icon-return"/></svg>Easy 7-day exchange or return</span>
+          <i>|</i>
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <span><svg><use href="#icon-truck"/></svg>Free shipping above &#8377;499</span>
+          <i>|</i>
+          <span><svg><use href="#icon-cash"/></svg>COD available</span>
+          <i>|</i>
+          <span><svg><use href="#icon-return"/></svg>Easy 7-day exchange or return</span>
+          <i>|</i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN HEADER ==================== -->
+  <header class="site-header">
+    <div class="header__inner">
+      <button class="mobile-menu" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg><use href="#icon-menu"/></svg>
+      </button>
+
+      <a class="brand" href="#" aria-label="Giraastore home">
+        <img src="Assets/giraalogo.png" alt="Giraa — stationery, lifestyle and gifts">
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="active" href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">New Arrivals</a>
+        <a href="#">Best Seller</a>
+        <a href="#">Collections</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" aria-label="Search"><svg><use href="#icon-search"/></svg></button>
+        <button class="profile-action" type="button" aria-label="My account"><svg><use href="#icon-user"/></svg></button>
+        <button class="wishlist-action" type="button" aria-label="Wishlist"><svg><use href="#icon-heart"/></svg></button>
+        <button class="cart-action" type="button" aria-label="Shopping cart">
+          <svg><use href="#icon-bag"/></svg><span class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SLIDER ==================== -->
+    <section class="hero-slider" aria-label="Featured collection">
+      <div class="hero-slides">
+        <a class="hero-slide active" href="#" aria-label="Shop Giraastore lifestyle collection">
+          <picture>
+            <source media="(max-width: 640px)" srcset="Assets/ChatGPT%20Image%20Jul%209,%202026,%2011_53_43%20AM.png">
+            <img src="Assets/ChatGPT%20Image%20Jul%209,%202026,%2011_20_25%20AM.png" alt="A lifestyle you'll love — premium stationery, cute gifts and lifestyle products">
+          </picture>
+        </a>
+        <a class="hero-slide" href="#" aria-label="Discover everyday happiness at Giraastore">
+          <picture>
+            <source media="(max-width: 640px)" srcset="Assets/mobile-banner2.png">
+            <img src="Assets/banner2.png" alt="Curated for everyday happiness — premium stationery and gifts">
+          </picture>
+        </a>
+      </div>
+      <div class="slider-dots" role="group" aria-label="Choose slide">
+        <button class="active" type="button" aria-label="Slide 1" aria-current="true"></button>
+        <button type="button" aria-label="Slide 2"></button>
+      </div>
+    </section>
+
+    <!-- ==================== STORE BENEFITS ==================== -->
+    <section class="benefits" aria-label="Why shop with Giraastore">
+      <div class="benefits__inner">
+        <article class="benefit">
+          <span class="benefit__icon"><svg><use href="#icon-truck"/></svg></span>
+          <div><h2>Free Shipping</h2><p>On orders above ₹499</p></div>
+        </article>
+        <article class="benefit">
+          <span class="benefit__icon"><svg><use href="#icon-shield"/></svg></span>
+          <div><h2>Secure Payments</h2><p>100% secure checkout</p></div>
+        </article>
+        <article class="benefit">
+          <span class="benefit__icon"><svg><use href="#icon-return"/></svg></span>
+          <div><h2>Easy Returns</h2><p>7-day easy return policy</p></div>
+        </article>
+        <article class="benefit">
+          <span class="benefit__icon"><svg><use href="#icon-support"/></svg></span>
+          <div><h2>Customer Support</h2><p>We're here to help</p></div>
+        </article>
+        <article class="benefit">
+          <span class="benefit__icon"><svg><use href="#icon-heart"/></svg></span>
+          <div><h2>Loved by Thousands</h2><p>All across India</p></div>
+        </article>
+        <article class="benefit">
+          <span class="benefit__icon"><svg><use href="#icon-gift"/></svg></span>
+          <div><h2>Premium Quality</h2><p>Curated with love</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== SHOP BY CATEGORY ==================== -->
+    <section class="catalog-section categories-section">
+      <div class="catalog-container">
+        <div class="section-heading">
+          <span class="heading-heart">♥</span>
+          <h2>Shop by Category</h2>
+          <span class="heading-heart">♥</span>
+          <a href="#" class="view-all">View all <span>→</span></a>
+        </div>
+        <div class="category-grid">
+          <a class="category-card" href="#">
+            <div class="category-image"><img class="crop crop-1" src="Assets/banner2.png" alt="Cute stationery"></div>
+            <h3>Stationery</h3>
+          </a>
+          <a class="category-card" href="#">
+            <div class="category-image"><img class="crop crop-2" src="Assets/ChatGPT%20Image%20Jul%209,%202026,%2011_20_25%20AM.png" alt="Pink gifts"></div>
+            <h3>Gifts</h3>
+          </a>
+          <a class="category-card" href="#">
+            <div class="category-image"><img class="crop crop-3" src="Assets/banner2.png" alt="Lifestyle accessories"></div>
+            <h3>Lifestyle</h3>
+          </a>
+          <a class="category-card" href="#">
+            <div class="category-image"><img class="crop crop-4" src="Assets/ChatGPT%20Image%20Jul%209,%202026,%2011_20_25%20AM.png" alt="Cute accessories"></div>
+            <h3>Accessories</h3>
+          </a>
+          <a class="category-card" href="#">
+            <div class="category-image"><img class="crop crop-5" src="Assets/ChatGPT%20Image%20Jul%209,%202026,%2011_20_25%20AM.png" alt="Plush toys"></div>
+            <h3>Plush &amp; Toys</h3>
+          </a>
+          <a class="category-card" href="#">
+            <div class="category-image"><img class="crop crop-6" src="Assets/about-us%20banner.png" alt="Home decor"></div>
+            <h3>Home &amp; Decor</h3>
+          </a>
+          <a class="category-card" href="#">
+            <div class="category-image"><img class="crop crop-7" src="Assets/banner2.png" alt="Bags and pouches"></div>
+            <h3>Bags &amp; Pouches</h3>
+          </a>
+          <a class="category-card" href="#">
+            <div class="category-image"><img class="crop crop-8" src="Assets/banner2.png" alt="Cute drinkware"></div>
+            <h3>Drinkware</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BEST SELLERS ==================== -->
+    <section class="catalog-section products-section">
+      <div class="catalog-container">
+        <div class="section-heading">
+          <span class="heading-heart">♥</span>
+          <h2>Best Sellers</h2>
+          <span class="heading-heart">♥</span>
+          <a href="#" class="view-all">View all <span>→</span></a>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <a class="product-image" href="#"><span class="product-badge">Bestseller</span><img class="crop crop-2" src="Assets/ChatGPT%20Image%20Jul%209,%202026,%2011_20_25%20AM.png" alt="Dream Big journal notebook"></a>
+            <h3><a href="#">Dream Big Journal Notebook</a></h3><p class="price">₹349</p><p class="rating">★★★★★ <span>(128)</span></p>
+          </article>
+          <article class="product-card">
+            <a class="product-image" href="#"><span class="product-badge">Bestseller</span><img class="crop crop-8" src="Assets/banner2.png" alt="Cute ceramic mug"></a>
+            <h3><a href="#">Cute Ceramic Mug 360ml</a></h3><p class="price">₹399</p><p class="rating">★★★★★ <span>(96)</span></p>
+          </article>
+          <article class="product-card">
+            <a class="product-image" href="#"><span class="product-badge">Bestseller</span><img class="crop crop-1" src="Assets/banner2.png" alt="Pastel desk organizer set"></a>
+            <h3><a href="#">Pastel Desk Organizer Set</a></h3><p class="price">₹449</p><p class="rating">★★★★★ <span>(104)</span></p>
+          </article>
+          <article class="product-card">
+            <a class="product-image" href="#"><span class="product-badge">Bestseller</span><img class="crop crop-3" src="Assets/banner2.png" alt="Decorative washi tape set"></a>
+            <h3><a href="#">Washi Tape Set (10 Pcs)</a></h3><p class="price">₹249</p><p class="rating">★★★★★ <span>(82)</span></p>
+          </article>
+          <article class="product-card">
+            <a class="product-image" href="#"><span class="product-badge">Bestseller</span><img class="crop crop-7" src="Assets/banner2.png" alt="Pink canvas tote bag"></a>
+            <h3><a href="#">Pink Canvas Tote Bag</a></h3><p class="price">₹599</p><p class="rating">★★★★★ <span>(74)</span></p>
+          </article>
+          <article class="product-card">
+            <a class="product-image" href="#"><span class="product-badge">Bestseller</span><img class="crop crop-5" src="Assets/ChatGPT%20Image%20Jul%209,%202026,%2011_20_25%20AM.png" alt="Kawaii bear keychain"></a>
+            <h3><a href="#">Kawaii Bear Keychain</a></h3><p class="price">₹149</p><p class="rating">★★★★★ <span>(113)</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NEW ARRIVALS ==================== -->
+    <section class="catalog-section products-section new-arrivals-section">
+      <div class="catalog-container">
+        <div class="section-heading">
+          <span class="heading-heart">♥</span>
+          <h2>New Arrivals</h2>
+          <span class="heading-heart">♥</span>
+          <a href="#" class="view-all">View all <span>→</span></a>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <a class="product-image" href="#"><span class="product-badge">New</span><img class="crop crop-1" src="Assets/banner2.png" alt="Kawaii gel pen set"></a>
+            <h3><a href="#">Kawaii Gel Pen Set (6 Pcs)</a></h3><p class="price">₹299</p>
+          </article>
+          <article class="product-card">
+            <a class="product-image" href="#"><span class="product-badge">New</span><img class="crop crop-2" src="Assets/ChatGPT%20Image%20Jul%209,%202026,%2011_20_25%20AM.png" alt="Cute bear spiral notebook"></a>
+            <h3><a href="#">Cute Bear Spiral Notebook</a></h3><p class="price">₹199</p>
+          </article>
+          <article class="product-card">
+            <a class="product-image" href="#"><span class="product-badge">New</span><img class="crop crop-3" src="Assets/banner2.png" alt="Pastel highlighter set"></a>
+            <h3><a href="#">Pastel Highlighter Set (6)</a></h3><p class="price">₹349</p>
+          </article>
+          <article class="product-card">
+            <a class="product-image" href="#"><span class="product-badge">New</span><img class="crop crop-6" src="Assets/about-us%20banner.png" alt="Cute bunny night lamp"></a>
+            <h3><a href="#">Cute Bunny Night Lamp</a></h3><p class="price">₹699</p>
+          </article>
+          <article class="product-card">
+            <a class="product-image" href="#"><span class="product-badge">New</span><img class="crop crop-4" src="Assets/ChatGPT%20Image%20Jul%209,%202026,%2011_20_25%20AM.png" alt="Kawaii storage pouch"></a>
+            <h3><a href="#">Kawaii Storage Pouch</a></h3><p class="price">₹249</p>
+          </article>
+          <article class="product-card">
+            <a class="product-image" href="#"><span class="product-badge">New</span><img class="crop crop-8" src="Assets/banner2.png" alt="Kawaii sticker pack"></a>
+            <h3><a href="#">Kawaii Sticker Pack</a></h3><p class="price">₹129</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROMOTIONAL COLLECTIONS ==================== -->
+    <section class="home-section promo-section" aria-label="Featured offers">
+      <div class="home-container promo-grid">
+        <article class="promo-card">
+          <img src="Assets/back%20to%20school.png" alt="Pink back-to-school stationery collection">
+          <div class="promo-copy">
+            <span>Back to School</span>
+            <h2>Essentials</h2>
+            <p>Everything you need for a fresh beginning!</p>
+            <a href="#">Shop now <b>→</b></a>
+          </div>
+        </article>
+        <article class="promo-card">
+          <img src="Assets/gift.png" alt="Special pink gift collection">
+          <div class="promo-copy">
+            <span>Gifting</span>
+            <h2>Made Special</h2>
+            <p>Thoughtful gifts for every occasion.</p>
+            <a href="#">Explore gifts <b>→</b></a>
+          </div>
+        </article>
+        <article class="promo-card">
+          <img src="Assets/upto-30%25.png" alt="Special collection discount">
+          <div class="promo-copy">
+            <span>Up to</span>
+            <h2>30% Off</h2>
+            <p>On selected collections.</p>
+            <a href="#">Shop deals <b>→</b></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== WHY CUSTOMERS LOVE US ==================== -->
+    <section class="home-section love-section">
+      <div class="home-container">
+        <div class="section-heading compact-heading">
+          <span class="heading-heart">♥</span>
+          <h2>Why Customers Love <em>Giraastore</em></h2>
+          <span class="heading-heart">♥</span>
+        </div>
+        <div class="love-grid">
+          <article><span><svg><use href="#icon-gift"/></svg></span><h3>Korean Inspired</h3><p>Trendy &amp; aesthetic designs</p></article>
+          <article><span><svg><use href="#icon-shield"/></svg></span><h3>Premium Quality</h3><p>Carefully selected products</p></article>
+          <article><span><svg><use href="#icon-cash"/></svg></span><h3>Affordable Prices</h3><p>Best quality at best prices</p></article>
+          <article><span><svg><use href="#icon-heart"/></svg></span><h3>Unique &amp; Cute</h3><p>Adorable products you'll love</p></article>
+          <article><span><svg><use href="#icon-truck"/></svg></span><h3>Fast Delivery</h3><p>Quick and reliable shipping</p></article>
+          <article><span><svg><use href="#icon-return"/></svg></span><h3>Secure Shopping</h3><p>Safe and secure payments</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CUSTOMER TESTIMONIALS ==================== -->
+    <section class="home-section testimonials-section">
+      <div class="home-container">
+        <div class="section-heading compact-heading">
+          <span class="heading-heart">♥</span>
+          <h2>Loved by Thousands</h2>
+          <span class="heading-heart">♥</span>
+        </div>
+        <div class="testimonial-slider">
+          <button class="testimonial-arrow previous" type="button" aria-label="Previous testimonials">‹</button>
+          <div class="testimonial-track">
+            <article class="testimonial-card">
+              <div class="reviewer"><span class="reviewer-avatar">NS</span><div><h3>Neha Sharma</h3><p>★★★★★</p></div></div>
+              <blockquote>The products are so cute and amazing! Loved the quality and packaging.</blockquote><span class="review-heart">♥</span>
+            </article>
+            <article class="testimonial-card">
+              <div class="reviewer"><span class="reviewer-avatar">RP</span><div><h3>Riya Patel</h3><p>★★★★★</p></div></div>
+              <blockquote>My go-to store for all stationery and gifting needs. Super fast delivery!</blockquote><span class="review-heart">♥</span>
+            </article>
+            <article class="testimonial-card">
+              <div class="reviewer"><span class="reviewer-avatar">AG</span><div><h3>Ananya Gupta</h3><p>★★★★★</p></div></div>
+              <blockquote>Everything is just perfect! Giraastore never disappoints.</blockquote><span class="review-heart">♥</span>
+            </article>
+            <article class="testimonial-card">
+              <div class="reviewer"><span class="reviewer-avatar">MK</span><div><h3>Meera Kapoor</h3><p>★★★★★</p></div></div>
+              <blockquote>Beautiful products, lovely colours and careful packaging. I will definitely order again!</blockquote><span class="review-heart">♥</span>
+            </article>
+          </div>
+          <button class="testimonial-arrow next" type="button" aria-label="Next testimonials">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== INSTAGRAM GALLERY ==================== -->
+    <section class="home-section instagram-section">
+      <div class="home-container">
+        <div class="section-heading compact-heading">
+          <span class="heading-heart">♥</span>
+          <h2>Follow Us on Instagram</h2>
+          <span class="heading-heart">♥</span>
+        </div>
+        <div class="instagram-grid">
+          <a class="instagram-post" href="#" aria-label="Follow Giraastore on Instagram"><img src="Assets/-2.jpg.jpeg" alt="Pink stationery inspiration"><span class="instagram-mark"><svg><use href="#icon-instagram"/></svg></span><span class="follow-overlay"><b>@giraastore</b><small>Follow me</small></span></a>
+          <a class="instagram-post" href="#" aria-label="View this Instagram post"><img src="Assets/-4.jpg.jpeg" alt="Cute pink desk accessories"><span class="instagram-mark"><svg><use href="#icon-instagram"/></svg></span><span class="follow-overlay"><b>@giraastore</b><small>Follow me</small></span></a>
+          <a class="instagram-post" href="#" aria-label="View this Instagram post"><img src="Assets/-5.jpg.jpeg" alt="Pastel mug and stationery"><span class="instagram-mark"><svg><use href="#icon-instagram"/></svg></span><span class="follow-overlay"><b>@giraastore</b><small>Follow me</small></span></a>
+          <a class="instagram-post" href="#" aria-label="View this Instagram post"><img src="Assets/-6.jpg.jpeg" alt="Cute notebook and pen"><span class="instagram-mark"><svg><use href="#icon-instagram"/></svg></span><span class="follow-overlay"><b>@giraastore</b><small>Follow me</small></span></a>
+          <a class="instagram-post" href="#" aria-label="View this Instagram post"><img src="Assets/product1.png" alt="Curated kawaii products"><span class="instagram-mark"><svg><use href="#icon-instagram"/></svg></span><span class="follow-overlay"><b>@giraastore</b><small>Follow me</small></span></a>
+          <a class="instagram-post" href="#" aria-label="View this Instagram post"><img src="Assets/product2.png" alt="Aesthetic stationery collection"><span class="instagram-mark"><svg><use href="#icon-instagram"/></svg></span><span class="follow-overlay"><b>@giraastore</b><small>Follow me</small></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NEWSLETTER ==================== -->
+    <section class="home-section newsletter-section">
+      <div class="home-container newsletter-panel">
+        <span class="newsletter-heart heart-one">♥</span>
+        <span class="newsletter-heart heart-two">♥</span>
+        <span class="newsletter-heart heart-three">♥</span>
+        <div class="newsletter-art"><img src="Assets/subscribe-img.png" alt="Cute bunny arriving with Giraastore updates"></div>
+        <div class="newsletter-copy"><h2>Join the Giraastore Family</h2><p>Be the first to know about new arrivals, exclusive offers &amp; special deals!</p></div>
+        <form class="newsletter-form">
+          <label class="sr-only" for="newsletter-email">Email address</label>
+          <input id="newsletter-email" type="email" placeholder="Enter your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-container footer-grid">
+        <div class="footer-brand">
+          <a href="#" aria-label="Giraastore home"><img src="Assets/giraalogo.png" alt="Giraastore"></a>
+          <p>More than a store —<br>a lifestyle you'll love.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"><svg><use href="#icon-instagram"/></svg></a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Pinterest">p</a>
+            <a href="#" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+        <nav class="footer-column" aria-label="Shop links">
+          <h2>Shop</h2>
+          <a href="#">All Products</a><a href="#">New Arrivals</a><a href="#">Best Sellers</a>
+          <a href="#">Stationery</a><a href="#">Accessories</a><a href="#">Gifts</a><a href="#">Lifestyle</a>
+        </nav>
+        <nav class="footer-column" aria-label="Help and information">
+          <h2>Help &amp; Info</h2>
+          <a href="#">About Us</a><a href="#">Contact Us</a><a href="#">FAQ</a>
+          <a href="#">Shipping Policy</a><a href="#">Return &amp; Refund Policy</a>
+          <a href="#">Terms &amp; Conditions</a><a href="#">Privacy Policy</a>
+        </nav>
+        <div class="footer-column footer-contact">
+          <h2>Customer Care</h2>
+          <a href="tel:+917039763941">+91 70397 63941</a>
+          <a href="mailto:giraastore@gmail.com">giraastore@gmail.com</a>
+          <p>Mon–Sat: 10AM–6PM<br>Sunday: Closed</p>
+        </div>
+        <div class="footer-payment">
+          <h2>We Accept</h2>
+          <div class="payment-badges">
+            <span><img src="Assets/visa.png" alt="Visa"></span>
+            <span><img src="Assets/master.png" alt="Mastercard"></span>
+            <span><img src="Assets/upi.png" alt="UPI"></span>
+            <span><img src="Assets/rupay.png" alt="RuPay"></span>
+            <span><img src="Assets/paypal.png" alt="PayPal"></span>
+          </div>
+          <h3>Secure &amp; Trusted</h3>
+          <div class="secure-note"><svg><use href="#icon-shield"/></svg><p>100% Secure Payments<br>and Protected Orders</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-container">
+        <p>© 2026 <span>Giraastore</span>. All Rights Reserved.</p>
+        <a class="back-to-top" href="#" aria-label="Back to top">↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
