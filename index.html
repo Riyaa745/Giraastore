@@ -22,6 +22,7 @@
     <symbol id="icon-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
     <symbol id="icon-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 13H6L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></symbol>
     <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="m8 10 4 4 4-4"/></symbol>
     <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 5 3 8.5 7 10 4-1.5 7-5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
     <symbol id="icon-support" viewBox="0 0 24 24"><path d="M4 14v-3a8 8 0 0 1 16 0v3"/><path d="M4 14h3v5H5a2 2 0 0 1-2-2v-1a2 2 0 0 1 1-2ZM20 14h-3v5h2a2 2 0 0 0 2-2v-1a2 2 0 0 0-1-2ZM17 19c-1 2-3 2-5 2"/></symbol>
     <symbol id="icon-gift" viewBox="0 0 24 24"><path d="M3 10h18v11H3zM12 10v11M2 6h20v4H2z"/><path d="M12 6H8.5A2.5 2.5 0 1 1 11 3.5L12 6Zm0 0h3.5A2.5 2.5 0 1 0 13 3.5L12 6Z"/></symbol>
@@ -72,11 +73,50 @@
 
       <nav class="main-nav" aria-label="Main navigation">
         <a class="active" href="#">Home</a>
-        <a href="#">Shop</a>
+        <div class="nav-item has-dropdown shop-nav">
+                  <button class="nav-trigger" type="button" aria-expanded="false">Shop <svg class="nav-chevron"><use href="#icon-chevron"/></svg></button>
+                  <div class="dropdown-panel shop-menu">
+                    <div class="mega-heading">Shop</div>
+                    <div class="submenu-item">
+                      <button class="submenu-trigger" type="button" aria-expanded="false"><span>✨ Featured</span><svg><use href="#icon-chevron"/></svg></button>
+                      <div class="submenu-panel"><a href="#">New Arrivals</a><a href="#">Best Sellers</a><a href="#">Sale</a><a href="#">All Products</a></div>
+                    </div>
+                    <div class="submenu-item">
+                      <button class="submenu-trigger" type="button" aria-expanded="false"><span>📝 Stationery</span><svg><use href="#icon-chevron"/></svg></button>
+                      <div class="submenu-panel"><a href="#">Notebooks</a><a href="#">Pens</a><a href="#">Stickers</a><a href="#">Washi Tape</a><a href="#">Pencil Cases</a><a href="#">Highlighters</a></div>
+                    </div>
+                    <div class="submenu-item">
+                      <button class="submenu-trigger" type="button" aria-expanded="false"><span>🎁 Gifts</span><svg><use href="#icon-chevron"/></svg></button>
+                      <div class="submenu-panel"><a href="#">Gift Sets</a><a href="#">Birthday Gifts</a><a href="#">Return Gifts</a><a href="#">Gift Boxes</a></div>
+                    </div>
+                    <div class="submenu-item">
+                      <button class="submenu-trigger" type="button" aria-expanded="false"><span>🏡 Lifestyle</span><svg><use href="#icon-chevron"/></svg></button>
+                      <div class="submenu-panel"><a href="#">Drinkware</a><a href="#">Home Decor</a><a href="#">Desk Setup</a><a href="#">Organizers</a></div>
+                    </div>
+                    <div class="submenu-item">
+                      <button class="submenu-trigger" type="button" aria-expanded="false"><span>👜 Accessories</span><svg><use href="#icon-chevron"/></svg></button>
+                      <div class="submenu-panel"><a href="#">Tote Bags</a><a href="#">Pouches</a><a href="#">Keychains</a><a href="#">Phone Accessories</a></div>
+                    </div>
+                    <a class="shop-single-link" href="#">🧸 Plush &amp; Toys</a>
+                    <a class="menu-banner compact-banner" href="#"><img src="Assets/ChatGPT%20Image%20Jul%201,%202026%20at%2010_53_15%20PM.png" alt="Cute new stationery arrivals"><span><small>Cute things are here</small><strong>Discover New Arrivals</strong></span></a>
+                  </div>
+                </div>
         <a href="#">New Arrivals</a>
-        <a href="#">Best Seller</a>
-        <a href="#">Collections</a>
-        <a href="#">About Us</a>
+        <a href="#">Best Sellers</a>
+        <div class="nav-item has-dropdown collections-nav">
+          <button class="nav-trigger" type="button" aria-expanded="false">Collections <svg class="nav-chevron"><use href="#icon-chevron"/></svg></button>
+          <div class="dropdown-panel collections-menu">
+            <div class="mega-heading">Collections</div>
+            <a href="#">Dream Collection <span>🌸</span></a>
+            <a href="#">Bear Collection <span>🧸</span></a>
+            <a href="#">Bunny Collection <span>🐰</span></a>
+            <a href="#">Pastel Collection <span>🎀</span></a>
+            <a href="#">Minimal Collection <span>🤍</span></a>
+            <a href="#">Kawaii Collection <span>✨</span></a>
+            <a href="#">Limited Edition <span>💖</span></a>
+          </div>
+        </div>
+        <a href="about.html">About Us</a>
         <a href="#">Contact Us</a>
       </nav>
 
@@ -201,27 +241,27 @@
         </div>
         <div class="product-grid">
           <article class="product-card">
-            <a class="product-image" href="#"><span class="product-badge">Bestseller</span><img class="crop" src="Assets/-9.jpg.jpeg" alt="Dream Big journal notebook"></a>
+            <a class="product-image" href="product.html"><span class="product-badge">Bestseller</span><img class="crop" src="Assets/-9.jpg.jpeg" alt="Dream Big journal notebook"></a>
             <h3><a href="#">Dream Big Journal Notebook</a></h3><p class="price">₹349</p><p class="rating">★★★★★ <span>(128)</span></p>
           </article>
           <article class="product-card">
-            <a class="product-image" href="#"><span class="product-badge">Bestseller</span><img class="crop" src="Assets/ChatGPT%20Image%20Jun%2030,%202026%20at%2002_15_07%20AM.png" alt="Cute ceramic mug"></a>
+            <a class="product-image" href="product.html"><span class="product-badge">Bestseller</span><img class="crop" src="Assets/ChatGPT%20Image%20Jun%2030,%202026%20at%2002_15_07%20AM.png" alt="Cute ceramic mug"></a>
             <h3><a href="#">Cute Ceramic Mug 360ml</a></h3><p class="price">₹399</p><p class="rating">★★★★★ <span>(96)</span></p>
           </article>
           <article class="product-card">
-            <a class="product-image" href="#"><span class="product-badge">Bestseller</span><img class="crop" src="Assets/jpg.jpeg" alt="Pastel desk organizer set"></a>
+            <a class="product-image" href="product.html"><span class="product-badge">Bestseller</span><img class="crop" src="Assets/jpg.jpeg" alt="Pastel desk organizer set"></a>
             <h3><a href="#">Pastel Desk Organizer Set</a></h3><p class="price">₹449</p><p class="rating">★★★★★ <span>(104)</span></p>
           </article>
           <article class="product-card">
-            <a class="product-image" href="#"><span class="product-badge">Bestseller</span><img class="crop" src="Assets/ChatGPT%20Image%20Jun%2030,%202026%20at%2002_04_57%20AM.png" alt="Decorative washi tape set"></a>
+            <a class="product-image" href="product.html"><span class="product-badge">Bestseller</span><img class="crop" src="Assets/ChatGPT%20Image%20Jun%2030,%202026%20at%2002_04_57%20AM.png" alt="Decorative washi tape set"></a>
             <h3><a href="#">Washi Tape Set (10 Pcs)</a></h3><p class="price">₹249</p><p class="rating">★★★★★ <span>(82)</span></p>
           </article>
           <article class="product-card">
-            <a class="product-image" href="#"><span class="product-badge">Bestseller</span><img class="crop" src="Assets/product1.png " alt="Pink canvas tote bag"></a>
+            <a class="product-image" href="product.html"><span class="product-badge">Bestseller</span><img class="crop" src="Assets/product1.png " alt="Pink canvas tote bag"></a>
             <h3><a href="#">Pink Canvas Tote Bag</a></h3><p class="price">₹599</p><p class="rating">★★★★★ <span>(74)</span></p>
           </article>
           <article class="product-card">
-            <a class="product-image" href="#"><span class="product-badge">Bestseller</span><img class="crop" src="Assets/-10.jpg.jpeg" alt="Kawaii bear keychain"></a>
+            <a class="product-image" href="product.html"><span class="product-badge">Bestseller</span><img class="crop" src="Assets/-10.jpg.jpeg" alt="Kawaii bear keychain"></a>
             <h3><a href="#">Kawaii Bear Keychain</a></h3><p class="price">₹149</p><p class="rating">★★★★★ <span>(113)</span></p>
           </article>
         </div>
@@ -239,27 +279,27 @@
         </div>
         <div class="product-grid">
           <article class="product-card">
-            <a class="product-image" href="#"><span class="product-badge">New</span><img class="crop" src="Assets/product2.png" alt="Kawaii gel pen set"></a>
+            <a class="product-image" href="product.html"><span class="product-badge">New</span><img class="crop" src="Assets/product2.png" alt="Kawaii gel pen set"></a>
             <h3><a href="#">Kawaii Gel Pen Set (6 Pcs)</a></h3><p class="price">₹299</p>
           </article>
           <article class="product-card">
-            <a class="product-image" href="#"><span class="product-badge">New</span><img class="crop" src="Assets/product3.png" alt="Cute bear spiral notebook"></a>
+            <a class="product-image" href="product.html"><span class="product-badge">New</span><img class="crop" src="Assets/product3.png" alt="Cute bear spiral notebook"></a>
             <h3><a href="#">Cute Bear Spiral Notebook</a></h3><p class="price">₹199</p>
           </article>
           <article class="product-card">
-            <a class="product-image" href="#"><span class="product-badge">New</span><img class="crop" src="Assets/-10.jpg.jpeg" alt="Pastel highlighter set"></a>
+            <a class="product-image" href="product.html"><span class="product-badge">New</span><img class="crop" src="Assets/-10.jpg.jpeg" alt="Pastel highlighter set"></a>
             <h3><a href="#">Pastel Highlighter Set (6)</a></h3><p class="price">₹349</p>
           </article>
           <article class="product-card">
-            <a class="product-image" href="#"><span class="product-badge">New</span><img class="crop" src="Assets/-4.jpg.jpeg" alt="Cute bunny night lamp"></a>
+            <a class="product-image" href="product.html"><span class="product-badge">New</span><img class="crop" src="Assets/-4.jpg.jpeg" alt="Cute bunny night lamp"></a>
             <h3><a href="#">Cute Bunny Night Lamp</a></h3><p class="price">₹699</p>
           </article>
           <article class="product-card">
-            <a class="product-image" href="#"><span class="product-badge">New</span><img class="crop" src="Assets/jpg.jpeg" alt="Kawaii storage pouch"></a>
+            <a class="product-image" href="product.html"><span class="product-badge">New</span><img class="crop" src="Assets/jpg.jpeg" alt="Kawaii storage pouch"></a>
             <h3><a href="#">Kawaii Storage Pouch</a></h3><p class="price">₹249</p>
           </article>
           <article class="product-card">
-            <a class="product-image" href="#"><span class="product-badge">New</span><img class="crop" src="Assets/-9.jpg.jpeg" alt="Kawaii sticker pack"></a>
+            <a class="product-image" href="product.html"><span class="product-badge">New</span><img class="crop" src="Assets/-9.jpg.jpeg" alt="Kawaii sticker pack"></a>
             <h3><a href="#">Kawaii Sticker Pack</a></h3><p class="price">₹129</p>
           </article>
         </div>
@@ -408,7 +448,7 @@
         </nav>
         <nav class="footer-column" aria-label="Help and information">
           <h2>Help &amp; Info</h2>
-          <a href="#">About Us</a><a href="#">Contact Us</a><a href="#">FAQ</a>
+          <a href="about.html">About Us</a><a href="#">Contact Us</a><a href="#">FAQ</a>
           <a href="#">Shipping Policy</a><a href="#">Return &amp; Refund Policy</a>
           <a href="#">Terms &amp; Conditions</a><a href="#">Privacy Policy</a>
         </nav>
