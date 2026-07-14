@@ -51,9 +51,11 @@ svg { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1
   min-height: 34px;
   display: flex;
   align-items: center;
-  animation: marquee-scroll 24s linear infinite;
+  animation: none;
   will-change: transform;
 }
+
+.marquee__track.is-ready { animation: marquee-scroll 24s linear infinite; }
 
 .marquee__group {
   width: max-content;
@@ -80,11 +82,11 @@ svg { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1
 .marquee__group svg { font-size: 14px; }
 
 @keyframes marquee-scroll {
-  to { transform: translateX(-33.333333%); }
+  to { transform: translateX(var(--marquee-shift, -33.333333%)); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .marquee__track { animation-play-state: paused; }
+  .marquee__track.is-ready { animation-play-state: paused; }
 }
 
 /* ==================== MAIN HEADER ==================== */
@@ -952,7 +954,8 @@ svg { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1
 }
 
 @media (max-width: 640px) {
-  .marquee__track { min-height: 36px; animation-duration: 16s; }
+  .marquee__track { min-height: 36px; }
+  .marquee__track.is-ready { animation-duration: 16s; }
   .marquee__group { gap: 10px; padding: 0 10px 0 0; }
   .marquee__group span { font-size: 11px; }
   .header__inner { width: calc(100% - 24px); min-height: 70px; gap: 10px; }
