@@ -133,3 +133,5 @@ document.querySelector(".newsletter-form")?.addEventListener("submit", (event) =
   const button = event.currentTarget.querySelector("button");
   button.textContent = "Thank you!";
 });
+const homeCatalogRoutes={'new arrivals':'new-arrivals','best sellers':'best-sellers','sale':'sale','all products':'all','stationery':'stationery','notebooks':'notebooks','pens':'pens','stickers':'stickers','washi tape':'washi-tape','pencil cases':'pencil-cases','highlighters':'highlighters','gifts':'gifts','gift sets':'gift-sets','birthday gifts':'birthday-gifts','return gifts':'return-gifts','gift boxes':'gift-boxes','lifestyle':'lifestyle','drinkware':'drinkware','home decor':'home-decor','desk setup':'desk-setup','organizers':'organizers','accessories':'accessories','tote bags':'tote-bags','pouches':'pouches','keychains':'keychains','phone accessories':'phone-accessories','plush & toys':'toys','jewellery':'jewellery'};
+document.querySelectorAll('a').forEach(link=>{const route=homeCatalogRoutes[link.textContent.trim().toLowerCase()];if(route)link.href=route==='all'?'shop.html':`shop.html?view=${route}`});

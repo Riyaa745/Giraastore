@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Your Cart | Giraastore</title>
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body data-page="cart">
+  <main>
+    <section class="page-hero">
+      <div class="eyebrow">Your cute picks</div>
+      <h1>Shopping Cart</h1>
+      <p>Review your products, update quantities, and continue when everything looks perfect.</p>
+    </section>
+    <section class="cart-page container">
+      <div class="cart-page__items" aria-live="polite"></div>
+      <aside class="cart-page__summary">
+        <h2>Order Summary</h2>
+        <div class="cart-page__shipping">
+          <p data-shipping-copy></p>
+          <div><span data-shipping-progress></span></div>
+        </div>
+        <div class="cart-page__total"><span>Subtotal</span><strong data-cart-subtotal>₹0</strong></div>
+        <p class="cart-page__note">Taxes included. Shipping is calculated at checkout.</p>
+        <a class="cart-page__checkout" href="contact.html">Checkout securely →</a>
+        <a class="cart-page__continue" href="shop.html">Continue shopping</a>
+      </aside>
+    </section>
+  </main>
+  <script src="pages.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>

@@ -1,9 +1,54 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shop All | Giraastore</title><link rel="stylesheet" href="pages.css"><link rel="stylesheet" href="cart.css"></head><body data-page="shop"><main><section class="page-hero"><div class="eyebrow">Made for happy desks</div><h1>Shop Our Collections</h1><p>Cute, useful and thoughtfully chosen finds to brighten your everyday.</p></section><section class="container"><div class="shop-toolbar"><div class="filters"><button class="active">All</button><button>Stationery</button><button>Gifts</button><button>Accessories</button></div><span>6 products</span></div><div class="shop-grid">
-<article class="shop-card"><div class="shop-card__image"><button class="wish">♡</button><img src="Assets/product3.png" alt="Cute Bear Spiral Notebook"><button class="quick-add" data-add-cart="notebook">Add to cart</button></div><h3>Cute Bear Spiral Notebook</h3><p>₹199</p></article>
-<article class="shop-card"><div class="shop-card__image"><button class="wish">♡</button><img src="Assets/product2.png" alt="Pastel Highlighter Set"><button class="quick-add" data-add-cart="pens">Add to cart</button></div><h3>Pastel Highlighter Set</h3><p>₹349</p></article>
-<article class="shop-card"><div class="shop-card__image"><button class="wish">♡</button><img src="Assets/ChatGPT Image Jun 30, 2026 at 02_15_07 AM.png" alt="Cute Ceramic Mug"><button class="quick-add" data-add-cart="mug">Add to cart</button></div><h3>Cute Ceramic Mug</h3><p>₹399</p></article>
-<article class="shop-card"><div class="shop-card__image"><button class="wish">♡</button><img src="Assets/jpg.jpeg" alt="Pastel Desk Organizer"><button class="quick-add" data-add-cart="organizer">Add to cart</button></div><h3>Pastel Desk Organizer</h3><p>₹449</p></article>
-<article class="shop-card"><div class="shop-card__image"><button class="wish">♡</button><img src="Assets/-9.jpg.jpeg" alt="Dream Big Journal"><button class="quick-add" data-add-cart="journal">Add to cart</button></div><h3>Dream Big Journal</h3><p>₹349</p></article>
-<article class="shop-card"><div class="shop-card__image"><button class="wish">♡</button><img src="Assets/-10.jpg.jpeg" alt="Kawaii Bear Keychain"><button class="quick-add" data-add-cart="keychain">Add to cart</button></div><h3>Kawaii Bear Keychain</h3><p>₹149</p></article></div></section></main><script src="pages.js"></script><script src="cart.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Shop cute stationery, gifts, accessories and lifestyle products from Giraastore.">
+  <title>Shop All | Giraastore</title>
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body data-page="shop" class="shop-catalog-page">
+  <main class="catalog-page">
+    <button class="mobile-filter-toggle" type="button" aria-expanded="false">☰ &nbsp; Filters &amp; Categories</button>
+    <div class="catalog-layout">
+      <aside class="catalog-sidebar" aria-label="Product filters">
+        <div class="filter-heading"><h2>Filter By</h2><button class="filter-close" type="button" aria-label="Close filters">×</button></div>
+        <section class="filter-group"><h3>Categories</h3><div class="category-filter">
+          <button class="active" type="button" data-category="all">All Products</button>
+          <button type="button" data-category="stationery">Stationery</button>
+          <button type="button" data-category="gifts">Gifts</button>
+          <button type="button" data-category="lifestyle">Lifestyle</button>
+          <button type="button" data-category="accessories">Accessories</button>
+          <button type="button" data-category="toys">Plush &amp; Toys</button>
+          <button type="button" data-category="bags">Bags &amp; Pouches</button>
+          <button type="button" data-category="jewellery">Jewellery</button>
+        </div></section>
+        <section class="filter-group"><h3>Price Range</h3><input id="price-range" type="range" min="99" max="1000" value="1000"><div class="range-values"><span>₹99</span><span id="range-output">₹1000</span></div></section>
+        <section class="filter-group"><h3>Availability</h3><label><input class="stock-filter" type="checkbox" value="in"> In Stock <span>(8)</span></label><label><input class="stock-filter" type="checkbox" value="out"> Out of Stock <span>(2)</span></label></section>
+        <section class="filter-group"><label for="shop-sort"><h3>Sort By</h3></label><select id="shop-sort"><option value="popular">Popularity</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option><option value="name">Name: A–Z</option></select></section>
+      </aside>
 
-
+      <section class="catalog-content" aria-labelledby="catalog-title">
+        <div class="catalog-banner"><div><small>Cute things for happy days</small><h1 id="catalog-title">Stationery to make<br>every day beautiful!</h1><a href="#products">Shop collection</a></div></div>
+        <div class="catalog-meta"><p><strong id="product-count">8</strong> lovely products</p><select id="mobile-sort" aria-label="Sort products"><option value="popular">Sort: Popularity</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option></select></div>
+        <div class="catalog-grid" id="products">
+          <article class="catalog-card" data-category="stationery" data-price="199" data-stock="in"><a class="catalog-card__image" href="product.html"><span class="sale-badge">Sale</span><button class="wish" type="button" aria-label="Add to wishlist">♡</button><img src="Assets/product3.png" alt="Cute bear spiral notebook"><button class="quick-add" type="button" data-add-cart="notebook">Add to cart</button></a><h2><a href="product.html">Cute Bear Spiral Notebook</a></h2><p>₹199</p></article>
+          <article class="catalog-card" data-category="stationery" data-price="349" data-stock="in"><a class="catalog-card__image" href="product.html"><span class="sale-badge">New</span><button class="wish" type="button" aria-label="Add to wishlist">♡</button><img src="Assets/product2.png" alt="Pastel highlighter set"><button class="quick-add" type="button" data-add-cart="pens">Add to cart</button></a><h2><a href="product.html">Pastel Highlighter Set</a></h2><p>₹349</p></article>
+          <article class="catalog-card" data-category="stationery" data-price="349" data-stock="in"><a class="catalog-card__image" href="product.html"><span class="sale-badge">New</span><button class="wish" type="button" aria-label="Add to wishlist">♡</button><img src="Assets/-9.jpg.jpeg" alt="Pastel gel pen set"><button class="quick-add" type="button" data-add-cart="gel-pens">Add to cart</button></a><h2><a href="product.html">Pastel Gel Pen Set</a></h2><p>₹349</p></article>
+          <article class="catalog-card" data-category="stationery" data-price="299" data-stock="out"><a class="catalog-card__image" href="product.html"><span class="sale-badge">Hot</span><button class="wish" type="button" aria-label="Add to wishlist">♡</button><img src="Assets/pinory diary ,, gift diary, journalss colorful, cute.jpg.jpeg" alt="Aesthetic journal notebook"><button class="quick-add" type="button" data-add-cart="journal">Add to cart</button></a><h2><a href="product.html">Aesthetic Journal Notebook</a></h2><p>₹299</p></article>
+          <article class="catalog-card" data-category="bags" data-price="249" data-stock="in"><a class="catalog-card__image" href="product.html"><span class="sale-badge">Sale</span><button class="wish" type="button" aria-label="Add to wishlist">♡</button><img src="Assets/stationery organizer ✨️🩷.jpg.jpeg" alt="Aesthetic favourite pouch"><button class="quick-add" type="button" data-add-cart="pouch">Add to cart</button></a><h2><a href="product.html">Aesthetic Favourite Pouch</a></h2><p>₹249</p></article>
+          <article class="catalog-card" data-category="lifestyle" data-price="349" data-stock="in"><a class="catalog-card__image" href="product.html"><span class="sale-badge">New</span><button class="wish" type="button" aria-label="Add to wishlist">♡</button><img src="Assets/ChatGPT Image Jun 30, 2026 at 02_15_07 AM.png" alt="Kawaii journal lifestyle set"><button class="quick-add" type="button" data-add-cart="lifestyle-set">Add to cart</button></a><h2><a href="product.html">Kawaii Journal Lifestyle Set</a></h2><p>₹349</p></article>
+          <article class="catalog-card" data-category="gifts" data-price="349" data-stock="in"><a class="catalog-card__image" href="product.html"><span class="sale-badge">Gift</span><button class="wish" type="button" aria-label="Add to wishlist">♡</button><img src="Assets/gift.png" alt="Kawaii shop merchandise"><button class="quick-add" type="button" data-add-cart="gift-set">Add to cart</button></a><h2><a href="product.html">Kawaii Gift Merchandise</a></h2><p>₹349</p></article>
+          <article class="catalog-card" data-category="accessories" data-price="349" data-stock="in"><a class="catalog-card__image" href="product.html"><span class="sale-badge">Hot</span><button class="wish" type="button" aria-label="Add to wishlist">♡</button><img src="Assets/product1.png" alt="Aesthetic journal lifestyle"><button class="quick-add" type="button" data-add-cart="desk-set">Add to cart</button></a><h2><a href="product.html">Aesthetic Journal Lifestyle</a></h2><p>₹349</p></article>
+        </div>
+        <p class="catalog-empty" hidden>No products match the selected filters.</p>
+        <nav class="catalog-pagination" aria-label="Product pages"><button type="button" aria-label="Previous page">‹</button><button class="active" type="button">1</button><button type="button">2</button><button type="button">3</button><span>…</span><button type="button" aria-label="Next page">›</button></nav>
+      </section>
+    </div>
+  </main>
+  <script src="pages.js"></script>
+  <script src="shop.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>

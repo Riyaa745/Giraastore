@@ -122,3 +122,5 @@ document.querySelector(".newsletter-form")?.addEventListener("submit", (event) =
   button.textContent = "Thank you!";
   button.disabled = true;
 });
+const productHelpFooter=[...document.querySelectorAll('.site-footer .footer-column')].find(column=>column.querySelector('h2')?.textContent.trim()==='Help & Info');
+productHelpFooter?.querySelector('h2')?.insertAdjacentHTML('afterend','<a href="help-center.html">Help Center</a>');
