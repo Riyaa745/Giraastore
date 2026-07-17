@@ -30,7 +30,7 @@ svg { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1
 .topbar {
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(90deg, var(--pink), #ffcfe2 55%, var(--lavender));
+  background: linear-gradient(90deg, #f8c8dc, #ffcfe2 55%, #e6e6fa);
   color: #5d4d55;
   font-size: 12px;
 }
@@ -91,10 +91,12 @@ svg { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1
 
 /* ==================== MAIN HEADER ==================== */
 .site-header {
-  position: relative;
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 80;
   background: rgba(255,255,255,.97);
   border-bottom: 1px solid var(--line);
+  box-shadow: 0 4px 14px rgba(72, 43, 54, .045);
 }
 
 .header__inner {
@@ -143,17 +145,19 @@ svg { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1
 
 .header-actions { display: flex; align-items: center; gap: 17px; }
 .header-actions button,
+.header-actions a,
 .mobile-menu {
   position: relative;
   display: grid;
   place-items: center;
-  padding: 3px;
+  padding: 1px;
   border: 0;
   background: none;
   cursor: pointer;
   font-size: 23px;
 }
-.header-actions button:hover { color: #ed639e; }
+.header-actions button:hover,
+.header-actions a:hover { color: #ed639e; }
 .cart-count {
   position: absolute;
   top: -5px;
@@ -166,6 +170,22 @@ svg { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1
   color: white;
   background: var(--button);
   border: 2px solid white;
+  border-radius: 999px;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+/* Keep the cart badge identical when header actions are links or buttons. */
+.header-actions .cart-count {
+  top: -5px;
+  right: -4px;
+  width: auto;
+  min-width: 17px;
+  height: 17px;
+  padding-inline: 4px;
+  color: #fff;
+  background: var(--button);
+  border: 2px solid #fff;
   border-radius: 999px;
   font-size: 8px;
   font-weight: 700;
@@ -960,9 +980,10 @@ svg { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1
   .marquee__group { gap: 10px; padding: 0 10px 0 0; }
   .marquee__group span { font-size: 11px; }
   .header__inner { width: calc(100% - 24px); min-height: 70px; gap: 10px; }
-  .header-actions { gap: 2px; }
-  .header-actions button { font-size: 20px; }
-  .profile-action { display: none !important; }
+  .header-actions { gap: 0px; }
+  .header-actions button,
+  .header-actions a { font-size: 20px; }
+  .profile-action { display: grid !important; }
   .mobile-menu { font-size: 22px; }
   .brand { width: 120px; }
   .hero-slide img { width: 100%; }

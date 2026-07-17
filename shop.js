@@ -35,6 +35,11 @@ const catalogViews={
   toys:{title:'Plush & Toys',category:'gifts',label:'Soft, cute and lovable'},
   jewellery:{title:'Jewellery Collection',category:'all',label:'A little sparkle for you'}
 };
+Object.assign(catalogViews,{
+  necklaces:{title:'Necklaces',category:'all',label:'Delicate details for every day'},earrings:{title:'Earrings',category:'all',label:'A little sparkle by your side'},rings:{title:'Rings',category:'all',label:'Beautiful finishing touches'},bracelets:{title:'Bracelets',category:'all',label:'Made to style and stack'},anklets:{title:'Anklets',category:'all',label:'Subtle shine for every step'},
+  'hair-clips':{title:'Hair Clips',category:'all',label:'Cute styles for happy hair'},'claw-clips':{title:'Claw Clips',category:'all',label:'Easy everyday styling'},'hair-bands':{title:'Hair Bands',category:'all',label:'Comfort with a cute touch'},scrunchies:{title:'Scrunchies',category:'all',label:'Soft, colourful and lovely'},
+  'phone-charms':{title:'Phone Charms',category:'all',label:'Make your phone uniquely yours'},'pop-sockets':{title:'Pop Sockets',category:'all',label:'Cute grip for your phone'},'charging-cables':{title:'Charging Cables',category:'all',label:'Useful tech with a cute twist'},'screen-protectors':{title:'Screen Protectors',category:'all',label:'Everyday protection'},'phone-stands':{title:'Phone Stands',category:'all',label:'Cute and convenient'},'mini-bags':{title:'Mini Bags',category:'all',label:'Small bags, big personality'}
+});
 
 const requestedView=new URLSearchParams(location.search).get('view');
 if(requestedView&&catalogViews[requestedView]){
@@ -46,11 +51,17 @@ if(requestedView&&catalogViews[requestedView]){
   categoryButtons.forEach(button=>button.classList.toggle('active',button.dataset.category===activeCategory));
 }
 
-if(['accessories','jewellery'].includes(requestedView)){
+const premiumAccessoryViews=['accessories','jewellery','necklaces','earrings','rings','bracelets','anklets','hair-clips','claw-clips','hair-bands','scrunchies','keychains','phone-accessories','phone-charms','pop-sockets','charging-cables','screen-protectors','phone-stands','tote-bags','pouches','mini-bags'];
+if(premiumAccessoryViews.includes(requestedView)){
   document.body.classList.add('accessories-catalog');
   const catalogPage=document.querySelector('.catalog-page');
   catalogPage.insertAdjacentHTML('afterbegin',`<nav class="accessory-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>›</span><a href="shop.html">Shop</a><span>›</span><strong>${requestedView==='jewellery'?'Jewellery':'Accessories'}</strong></nav><section class="accessory-hero"><div class="accessory-hero__copy"><small>Giraastore Essentials</small><h1>${requestedView==='jewellery'?'Timeless<br>Jewellery':'Everyday<br>Accessories'}</h1><i></i><p>Cute details. Beautifully yours.</p><div class="accessory-features"><span>♢<b>Premium Quality</b></span><span>♡<b>Skin Friendly</b></span><span>☼<b>Everyday Style</b></span><span>✦<b>Made to Last</b></span></div></div></section><div class="accessory-intro">Our accessories are thoughtfully selected to stay beautiful through every little moment.<br>Made for everyday styling, gifting and adding a touch of joy to your look.</div>`);
   catalogPage.insertAdjacentHTML('beforeend',`<section class="accessory-quality" aria-label="Accessory benefits"><article><i>♡</i><div><strong>Skin Friendly</strong><small>Comfortable everyday wear</small></div></article><article><i>☼</i><div><strong>Premium Quality</strong><small>Carefully selected materials</small></div></article><article><i>♢</i><div><strong>Made to Last</strong><small>Designed for daily styling</small></div></article><article><i>♙</i><div><strong>Perfect Gift</strong><small>For yourself or loved ones</small></div></article></section>`);
+  catalogPage.querySelector('.accessory-breadcrumb strong').textContent=catalogViews[requestedView].title;
+  catalogPage.querySelector('.accessory-hero h1').textContent=catalogViews[requestedView].title;
+  const accessoryContent=catalogPage.querySelector('.catalog-content');
+  accessoryContent.prepend(catalogPage.querySelector('.accessory-intro'));
+  accessoryContent.prepend(catalogPage.querySelector('.accessory-hero'));
 }
 
 function updateCatalog(){

@@ -124,3 +124,6 @@ document.querySelector(".newsletter-form")?.addEventListener("submit", (event) =
 });
 const productHelpFooter=[...document.querySelectorAll('.site-footer .footer-column')].find(column=>column.querySelector('h2')?.textContent.trim()==='Help & Info');
 productHelpFooter?.querySelector('h2')?.insertAdjacentHTML('afterend','<a href="help-center.html">Help Center</a>');
+productHelpFooter?.insertAdjacentHTML('beforeend','<a href="disclaimer.html">Disclaimer</a>');
+const productFooterRoutes={'all products':'shop.html','new arrivals':'shop.html?view=new-arrivals','best sellers':'shop.html?view=best-sellers','stationery':'shop.html?view=stationery','accessories':'shop.html?view=accessories','gifts':'shop.html?view=gifts','lifestyle':'shop.html?view=lifestyle','about us':'about.html','contact us':'contact.html','faq':'faq.html','shipping policy':'shipping-policy.html','return & refund policy':'return-policy.html','terms & conditions':'terms.html','privacy policy':'privacy-policy.html','help center':'help-center.html','disclaimer':'disclaimer.html'};
+document.querySelectorAll('.site-footer a').forEach(link=>{const href=productFooterRoutes[link.textContent.trim().toLowerCase()];if(href)link.href=href});

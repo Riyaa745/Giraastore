@@ -60,6 +60,8 @@
     }
     accessories?.querySelector(".accessories-menu")?.replaceChildren();
     accessories?.querySelector(".accessories-menu")?.insertAdjacentHTML("afterbegin", accessoriesMarkup);
+    const accessoryRoutes={'necklaces':'necklaces','earrings':'earrings','rings':'rings','bracelets':'bracelets','anklets':'anklets','hair clips':'hair-clips','claw clips':'claw-clips','hair bands':'hair-bands','scrunchies':'scrunchies','keychains':'keychains','phone charms':'phone-charms','pop sockets':'pop-sockets','charging cables':'charging-cables','screen protectors':'screen-protectors','phone stands':'phone-stands','tote bags':'tote-bags','pouches':'pouches','mini bags':'mini-bags'};
+    accessories?.querySelectorAll('.accessories-menu a').forEach(link=>{const view=accessoryRoutes[link.textContent.trim().toLowerCase()];if(view)link.href=`shop.html?view=${view}`});
 
     const direct = [...nav.children];
     const link = label => direct.find(node => node.matches("a") && node.textContent.trim() === label);
